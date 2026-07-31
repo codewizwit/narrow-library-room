@@ -1,0 +1,2103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <title>Narrow Library Bedroom — Drawing Set</title>
+    <style>
+      :root {
+        --paper: #f2ede4;
+        --sheet: #fffdf9;
+        --ink: #14110f;
+        --line: #2a2522;
+        --rule: #8c8378;
+        --accent: #b5502f;
+        --led: #d9942b;
+        --joinery: #2f4739;
+        --fill-a: #ede7dd;
+        --fill-b: #dbd3c6;
+        --fill-c: #c8beae;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          15px/1.55 ui-sans-serif,
+          -apple-system,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        padding: 40px 24px 80px;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+
+      header.doc {
+        border-bottom: 2px solid var(--ink);
+        padding-bottom: 20px;
+        margin-bottom: 8px;
+      }
+      header.doc h1 {
+        font-size: 30px;
+        line-height: 1.15;
+        margin: 0 0 6px;
+        letter-spacing: -0.01em;
+      }
+      header.doc .sub {
+        color: #5c544c;
+        font-size: 15px;
+        margin: 0;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 34px;
+        margin-top: 16px;
+        font-size: 13px;
+      }
+      .meta div {
+        white-space: nowrap;
+      }
+      .meta b {
+        font-weight: 600;
+      }
+      .meta span {
+        color: #6b635a;
+      }
+
+      .sheet {
+        background: var(--sheet);
+        border: 1px solid #d6cec2;
+        border-radius: 3px;
+        padding: 26px 26px 22px;
+        margin: 34px 0;
+        box-shadow: 0 1px 3px rgba(20, 17, 15, 0.07);
+      }
+      .sheet > h2 {
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin: 0 0 2px;
+        font-weight: 700;
+      }
+      .sheet > .cap {
+        margin: 0 0 18px;
+        font-size: 13.5px;
+        color: #5c544c;
+        max-width: 66ch;
+      }
+      .sheet svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
+      .sheet.narrow svg {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .sheet.mid svg {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .notes {
+        margin-top: 18px;
+        padding-top: 14px;
+        border-top: 1px solid #e3dcd1;
+        font-size: 13px;
+        color: #4a423b;
+      }
+      .notes ul {
+        margin: 6px 0 0;
+        padding-left: 18px;
+      }
+      .notes li {
+        margin: 3px 0;
+      }
+
+      /* ---- SVG shared classes ---- */
+      svg text {
+        font-family:
+          ui-sans-serif,
+          -apple-system,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        fill: var(--ink);
+      }
+      .wall {
+        fill: url(#hatch);
+        stroke: var(--line);
+        stroke-width: 0.5;
+      }
+      .room {
+        fill: none;
+        stroke: var(--line);
+        stroke-width: 0.8;
+      }
+      .obj {
+        stroke: var(--line);
+        stroke-width: 0.5;
+      }
+      .thin {
+        fill: none;
+        stroke: var(--line);
+        stroke-width: 0.3;
+      }
+      .hidden-ln {
+        fill: none;
+        stroke: var(--rule);
+        stroke-width: 0.35;
+        stroke-dasharray: 3 2.2;
+      }
+      .dim line {
+        stroke: var(--accent);
+        stroke-width: 0.28;
+        fill: none;
+      }
+      .dim text {
+        fill: var(--accent);
+        font-size: 0.85em;
+        font-weight: 600;
+      }
+      .ext {
+        stroke: var(--accent);
+        stroke-width: 0.22;
+      }
+      .lbl {
+        font-size: 0.95em;
+        font-weight: 600;
+      }
+      .lbl-sm {
+        font-size: 0.8em;
+        fill: #5c544c;
+      }
+      .lbl-key {
+        font-size: 0.9em;
+        font-weight: 700;
+        fill: var(--joinery);
+      }
+      .strike {
+        stroke: var(--accent);
+        stroke-width: 0.45;
+        stroke-dasharray: 4 2.5;
+        fill: none;
+      }
+      .led {
+        fill: var(--led);
+      }
+      .ledln {
+        stroke: var(--led);
+        stroke-width: 0.9;
+        fill: none;
+        stroke-linecap: round;
+      }
+      .scale line {
+        stroke: var(--ink);
+        stroke-width: 0.3;
+      }
+      .scale text {
+        font-size: 0.72em;
+        fill: #5c544c;
+      }
+
+      table.spec {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 13.5px;
+        margin-top: 4px;
+      }
+      table.spec th,
+      table.spec td {
+        border-bottom: 1px solid #e3dcd1;
+        padding: 7px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      table.spec th {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6b635a;
+        font-weight: 700;
+        border-bottom: 1.5px solid var(--ink);
+      }
+      table.spec td:first-child {
+        width: 34%;
+        font-weight: 600;
+      }
+      table.spec td.num {
+        font-variant-numeric: tabular-nums;
+      }
+      table.spec tr.grp td {
+        background: #f6f1e8;
+        font-weight: 700;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4a423b;
+      }
+
+      footer.doc {
+        margin-top: 40px;
+        padding-top: 16px;
+        border-top: 1px solid #d6cec2;
+        font-size: 12.5px;
+        color: #6b635a;
+      }
+
+      /* knockout halo so annotation stays legible where it crosses linework */
+      svg .lbl,
+      svg .lbl-sm,
+      svg .lbl-key,
+      svg .dim text {
+        paint-order: stroke fill;
+        stroke: #f8f4ec;
+        stroke-width: 1;
+        stroke-linejoin: round;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          padding: 0;
+          font-size: 11px;
+        }
+        .sheet svg {
+          max-height: 175mm;
+        }
+        .sheet {
+          break-after: page;
+          box-shadow: none;
+          border: none;
+          margin: 0;
+          padding: 12mm;
+        }
+        header.doc {
+          padding: 12mm 12mm 6mm;
+        }
+        footer.doc {
+          padding: 0 12mm 12mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- shared defs -->
+      <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <defs>
+          <marker
+            id="arw"
+            markerWidth="3.2"
+            markerHeight="2.4"
+            refX="3.2"
+            refY="1.2"
+            orient="auto-start-reverse"
+            markerUnits="userSpaceOnUse"
+          >
+            <path d="M0,0 L3.2,1.2 L0,2.4 z" fill="#B5502F" />
+          </marker>
+          <marker
+            id="arws"
+            markerWidth="2"
+            markerHeight="1.5"
+            refX="2"
+            refY="0.75"
+            orient="auto-start-reverse"
+            markerUnits="userSpaceOnUse"
+          >
+            <path d="M0,0 L2,0.75 L0,1.5 z" fill="#B5502F" />
+          </marker>
+          <pattern
+            id="hatch"
+            width="3"
+            height="3"
+            patternTransform="rotate(45)"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect width="3" height="3" fill="#E8E1D6" />
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="3"
+              stroke="#9C9285"
+              stroke-width=".55"
+            />
+          </pattern>
+        </defs>
+      </svg>
+
+      <header class="doc">
+        <h1>Narrow Library Bedroom</h1>
+        <p class="sub">
+          Working drawing set. Twin bed spanning the full width, stepped
+          floor-to-ceiling book wall, windowless room.
+        </p>
+        <div class="meta">
+          <div>
+            <b>Room</b>
+            <span
+              >13&#8242;-8&#8243; &times; 6&#8242;-4&#8243; &times;
+              9&#8242;-0&#8243;</span
+            >
+          </div>
+          <div><b>Bed</b> <span>Twin, 38&#8243; &times; 75&#8243;</span></div>
+          <div>
+            <b>Shelving</b> <span>18&#8243; base / 12&#8243; upper</span>
+          </div>
+          <div><b>Daylight</b> <span>None</span></div>
+          <div><b>Units</b> <span>Inches</span></div>
+        </div>
+      </header>
+
+      <!-- ============================= SHEET 1 ============================= -->
+      <section class="sheet mid">
+        <h2>Sheet 1 &middot; Floor Plan</h2>
+        <p class="cap">
+          Bed spans wall to wall at the far end. The shelf run starts flush with
+          the bed&#8217;s foot edge and runs the full 126&#8243; to the near
+          wall, uninterrupted because the door swings out.
+        </p>
+
+        <svg
+          viewBox="-46 -32 152 240"
+          style="font-size: 3px"
+          role="img"
+          aria-label="Floor plan of the room"
+        >
+          <!-- walls -->
+          <rect class="wall" x="-4" y="-4" width="84" height="4" />
+          <rect class="wall" x="-4" y="0" width="4" height="164" />
+          <rect class="wall" x="76" y="0" width="4" height="164" />
+          <rect class="wall" x="-4" y="164" width="42" height="4" />
+          <rect class="wall" x="70" y="164" width="10" height="4" />
+
+          <!-- room outline -->
+          <rect class="room" x="0" y="0" width="76" height="164" />
+
+          <!-- BED PLINTH -->
+          <rect class="obj" x="0" y="0" width="76" height="38" fill="#DBD3C6" />
+          <!-- drawer divisions (hidden below mattress) -->
+          <line class="hidden-ln" x1="25.33" y1="0" x2="25.33" y2="38" />
+          <line class="hidden-ln" x1="50.67" y1="0" x2="50.67" y2="38" />
+          <!-- mattress -->
+          <rect
+            class="obj"
+            x="0.5"
+            y="0"
+            width="75"
+            height="38"
+            fill="#EDE7DD"
+          />
+          <!-- pillows -->
+          <rect
+            class="obj"
+            x="2.5"
+            y="4"
+            width="16"
+            height="13"
+            rx="2.5"
+            fill="#FFFDF9"
+          />
+          <rect
+            class="obj"
+            x="2.5"
+            y="21"
+            width="16"
+            height="13"
+            rx="2.5"
+            fill="#FFFDF9"
+          />
+          <text class="lbl" x="47" y="18" text-anchor="middle">
+            TWIN 38 &times; 75
+          </text>
+          <text class="lbl-sm" x="47" y="23.5" text-anchor="middle">
+            on built-in plinth, 3 drawers below
+          </text>
+          <text class="lbl-sm" x="26" y="10" fill="#8A8078">
+            &larr; HEAD END
+          </text>
+
+          <!-- drawer pull direction (arrows kept clear of the shelf run) -->
+          <line
+            class="dim"
+            x1="38"
+            y1="30"
+            x2="38"
+            y2="45"
+            marker-end="url(#arw)"
+            style="stroke-dasharray: 2 1.5"
+          />
+          <line
+            class="dim"
+            x1="63.5"
+            y1="30"
+            x2="63.5"
+            y2="45"
+            marker-end="url(#arw)"
+            style="stroke-dasharray: 2 1.5"
+          />
+          <text class="lbl-sm" x="24" y="49.5" fill="#B5502F">
+            drawers pull this way &mdash; the only open face
+          </text>
+
+          <!-- SHELF RUN base 18" -->
+          <rect
+            class="obj"
+            x="0"
+            y="38"
+            width="18"
+            height="126"
+            fill="#DBD3C6"
+          />
+          <!-- bay partitions -->
+          <rect class="obj" x="0" y="38" width="18" height="1" fill="#C8BEAE" />
+          <rect
+            class="obj"
+            x="0"
+            y="69.25"
+            width="18"
+            height="1"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="100.5"
+            width="18"
+            height="1"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="131.75"
+            width="18"
+            height="1"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="163"
+            width="18"
+            height="1"
+            fill="#C8BEAE"
+          />
+          <!-- upper carcass line, 12" -->
+          <line class="hidden-ln" x1="12" y1="38" x2="12" y2="164" />
+          <!-- shelf annotation, placed in the open walkway with a leader -->
+          <line class="thin" x1="18" y1="62" x2="24" y2="62" />
+          <text class="lbl" x="25.5" y="61">18&#8243; CLOSED BASE</text>
+          <text class="lbl-sm" x="25.5" y="65.5">
+            12&#8243; open shelving above
+          </text>
+          <text class="lbl-sm" x="25.5" y="69.5">
+            the 32&#8243; step (dashed line)
+          </text>
+
+          <!-- bay numbers -->
+          <text class="lbl-sm" x="6" y="55.5" text-anchor="middle">BAY 1</text>
+          <text class="lbl-sm" x="6" y="86.5" text-anchor="middle">BAY 2</text>
+          <text class="lbl-sm" x="6" y="118" text-anchor="middle">BAY 3</text>
+          <text class="lbl-sm" x="6" y="149" text-anchor="middle">BAY 4</text>
+
+          <!-- READING NOOK -->
+          <rect class="hidden-ln" x="30" y="92" width="36" height="48" rx="3" />
+          <circle class="thin" cx="60" cy="99" r="4" />
+          <text class="lbl" x="48" y="114" text-anchor="middle">
+            READING NOOK
+          </text>
+          <text class="lbl-sm" x="48" y="119" text-anchor="middle">
+            chair + floor lamp
+          </text>
+          <text class="lbl-sm" x="60" y="94" text-anchor="middle">lamp</text>
+
+          <!-- BARE RIGHT WALL -->
+          <text
+            class="lbl-key"
+            x="72"
+            y="62"
+            text-anchor="middle"
+            transform="rotate(-90 72 62)"
+          >
+            BARE RIGHT WALL
+          </text>
+
+          <!-- DOOR, swings OUT -->
+          <line class="obj" x1="38" y1="164" x2="70" y2="164" stroke="none" />
+          <path
+            class="thin"
+            d="M 38,164 A 32,32 0 0 0 70,196"
+            stroke-dasharray="3 2"
+          />
+          <rect
+            class="obj"
+            x="69"
+            y="164"
+            width="2"
+            height="32"
+            fill="#C8BEAE"
+          />
+          <text class="lbl-key" x="34" y="182" text-anchor="end">
+            DOOR SWINGS OUT
+          </text>
+          <text class="lbl-sm" x="34" y="187" text-anchor="end">
+            no arc inside the room
+          </text>
+          <text class="lbl-sm" x="54" y="169.5" text-anchor="middle">
+            32&#8243; opening
+          </text>
+
+          <!-- ===== DIMENSIONS ===== -->
+          <!-- overall width -->
+          <g class="dim">
+            <line
+              x1="0"
+              y1="-25"
+              x2="76"
+              y2="-25"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="0" y1="-27" x2="0" y2="-6" />
+            <line class="ext" x1="76" y1="-27" x2="76" y2="-6" />
+            <text x="38" y="-27.5" text-anchor="middle">
+              76&#8243; &nbsp;(6&#8242;-4&#8243;)
+            </text>
+          </g>
+          <!-- depth split -->
+          <g class="dim">
+            <line
+              x1="0"
+              y1="-14"
+              x2="18"
+              y2="-14"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line
+              x1="18"
+              y1="-14"
+              x2="76"
+              y2="-14"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="18" y1="-16" x2="18" y2="-6" />
+            <text x="9" y="-16.5" text-anchor="middle">18&#8243;</text>
+            <text x="47" y="-16.5" text-anchor="middle">
+              58&#8243; CLEAR AT FLOOR
+            </text>
+            <text x="47" y="-10" text-anchor="middle" style="font-weight: 400">
+              64&#8243; clear at eye level (above the 32&#8243; step)
+            </text>
+          </g>
+          <!-- overall length -->
+          <g class="dim">
+            <line
+              x1="96"
+              y1="0"
+              x2="96"
+              y2="164"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="80" y1="0" x2="98" y2="0" />
+            <line class="ext" x1="80" y1="164" x2="98" y2="164" />
+            <text
+              x="96"
+              y="82"
+              text-anchor="middle"
+              dy="-2"
+              transform="rotate(-90 96 82)"
+            >
+              164&#8243; &nbsp;(13&#8242;-8&#8243;)
+            </text>
+          </g>
+          <!-- bed / run split -->
+          <g class="dim">
+            <line
+              x1="86"
+              y1="0"
+              x2="86"
+              y2="38"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line
+              x1="86"
+              y1="38"
+              x2="86"
+              y2="164"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="80" y1="38" x2="88" y2="38" />
+            <text
+              x="86"
+              y="19"
+              text-anchor="middle"
+              dy="-2"
+              transform="rotate(-90 86 19)"
+            >
+              38&#8243; BED
+            </text>
+            <text
+              x="86"
+              y="101"
+              text-anchor="middle"
+              dy="-2"
+              transform="rotate(-90 86 101)"
+            >
+              126&#8243; SHELF RUN &nbsp;(10&#8242;-6&#8243;)
+            </text>
+          </g>
+          <!-- bay dims -->
+          <g class="dim">
+            <line
+              x1="-9"
+              y1="39"
+              x2="-9"
+              y2="69.25"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="-9"
+              y="54"
+              text-anchor="middle"
+              dy="-1.5"
+              transform="rotate(-90 -9 54)"
+            >
+              30&#188;&#8243; typ.
+            </text>
+          </g>
+
+          <!-- scale bar -->
+          <g class="scale" transform="translate(-42,196)">
+            <line x1="0" y1="0" x2="24" y2="0" />
+            <line x1="0" y1="-2" x2="0" y2="2" />
+            <line x1="12" y1="-2" x2="12" y2="2" />
+            <line x1="24" y1="-2" x2="24" y2="2" />
+            <rect x="0" y="-1.4" width="12" height="2.8" fill="#14110F" />
+            <text x="0" y="6">0</text>
+            <text x="12" y="6" text-anchor="middle">12</text>
+            <text x="24" y="6" text-anchor="middle">24 in</text>
+          </g>
+        </svg>
+
+        <div class="notes">
+          <ul>
+            <li>
+              Mattress is 75&#8243; long in a 76&#8243; opening. That 1&#8243;
+              of total slack rules out any conventional frame and is why the
+              plinth is built to the room.
+            </li>
+            <li>
+              Shelf run begins at y = 38&#8243; from the far wall, flush with
+              the bed&#8217;s foot edge. Its 18&#8243; projection is what
+              screens the pillow end from the doorway.
+            </li>
+            <li>
+              Confirm hallway clearance for the outward swing and that the leaf
+              does not collide with an opposing door.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================= SHEET 2 ============================= -->
+      <section class="sheet">
+        <h2>Sheet 2 &middot; Left Wall Elevation</h2>
+        <p class="cap">
+          The stepped run, seen from the room. Closed base to 32&#8243;, ledge,
+          then open book shelving to the ceiling. Roughly 63 linear feet of
+          shelf on this wall alone.
+        </p>
+
+        <svg
+          viewBox="-44 -16 216 152"
+          style="font-size: 3.4px"
+          role="img"
+          aria-label="Elevation of the left wall shelf run"
+        >
+          <!-- carcass envelope -->
+          <rect
+            class="obj"
+            x="0"
+            y="0"
+            width="126"
+            height="108"
+            fill="#F6F1E8"
+          />
+
+          <!-- base zone -->
+          <rect
+            class="obj"
+            x="0"
+            y="76"
+            width="126"
+            height="28"
+            fill="#DBD3C6"
+          />
+          <!-- base doors -->
+          <rect
+            class="obj"
+            x="1.6"
+            y="77.4"
+            width="29"
+            height="25.2"
+            fill="#E5DED2"
+          />
+          <rect
+            class="obj"
+            x="32.85"
+            y="77.4"
+            width="29"
+            height="25.2"
+            fill="#E5DED2"
+          />
+          <rect
+            class="obj"
+            x="64.1"
+            y="77.4"
+            width="29"
+            height="25.2"
+            fill="#E5DED2"
+          />
+          <rect
+            class="obj"
+            x="95.35"
+            y="77.4"
+            width="29"
+            height="25.2"
+            fill="#E5DED2"
+          />
+          <!-- toe kick -->
+          <rect
+            class="obj"
+            x="0"
+            y="104"
+            width="126"
+            height="4"
+            fill="#B9AF9F"
+          />
+
+          <!-- ledge cap at 32" -->
+          <rect x="0" y="74.5" width="126" height="1.5" fill="#2F4739" />
+
+          <!-- shelves: AFF 46,60,73,86,98 -> y = 108-AFF, board 1.2 thick upward -->
+          <rect
+            class="obj"
+            x="0"
+            y="60.8"
+            width="126"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="46.8"
+            width="126"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="33.8"
+            width="126"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="20.8"
+            width="126"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="8.8"
+            width="126"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+
+          <!-- LED strips under each shelf front + under ledge -->
+          <line class="ledln" x1="2" y1="62.6" x2="124" y2="62.6" />
+          <line class="ledln" x1="2" y1="48.6" x2="124" y2="48.6" />
+          <line class="ledln" x1="2" y1="35.6" x2="124" y2="35.6" />
+          <line class="ledln" x1="2" y1="22.6" x2="124" y2="22.6" />
+          <line class="ledln" x1="2" y1="10.6" x2="124" y2="10.6" />
+          <line class="ledln" x1="2" y1="73" x2="124" y2="73" />
+
+          <!-- partitions, full height -->
+          <rect class="obj" x="0" y="0" width="1" height="108" fill="#C8BEAE" />
+          <rect
+            class="obj"
+            x="31.25"
+            y="0"
+            width="1"
+            height="108"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="62.5"
+            y="0"
+            width="1"
+            height="108"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="93.75"
+            y="0"
+            width="1"
+            height="108"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="125"
+            y="0"
+            width="1"
+            height="108"
+            fill="#C8BEAE"
+          />
+
+          <!-- book indication in one bay for legibility -->
+          <g fill="#CFC5B4" stroke="#2A2522" stroke-width=".25">
+            <rect x="3" y="51" width="1.6" height="9.8" />
+            <rect x="5" y="52.6" width="2.2" height="8.2" />
+            <rect x="7.6" y="50.4" width="1.4" height="10.4" />
+            <rect x="9.4" y="53" width="2.6" height="7.8" />
+            <rect x="12.4" y="51.6" width="1.8" height="9.2" />
+            <rect x="14.6" y="52" width="1.5" height="8.8" />
+            <rect x="16.5" y="50.8" width="2.4" height="10" />
+          </g>
+
+          <!-- key labels -->
+          <text class="lbl-key" x="63" y="93" text-anchor="middle">
+            CLOSED BASE &mdash; 18&#8243; DEEP
+          </text>
+          <text class="lbl-sm" x="63" y="98.5" text-anchor="middle">
+            archive boxes, bedding, suitcases, vacuum
+          </text>
+          <text class="lbl" x="63" y="30" text-anchor="middle">
+            OPEN BOOK SHELVING &mdash; 12&#8243; DEEP
+          </text>
+          <text class="lbl-sm" x="63" y="5.5" text-anchor="middle">
+            adjustable on 32&nbsp;mm pin system &middot; one fixed shelf
+            mid-height for racking
+          </text>
+          <text
+            class="lbl-sm"
+            x="63"
+            y="72"
+            text-anchor="middle"
+            fill="#D9942B"
+          >
+            LED under every shelf front + under the ledge
+          </text>
+
+          <!-- ===== DIMENSIONS ===== -->
+          <!-- overall length bottom -->
+          <g class="dim">
+            <line
+              x1="0"
+              y1="126"
+              x2="126"
+              y2="126"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="0" y1="110" x2="0" y2="128" />
+            <line class="ext" x1="126" y1="110" x2="126" y2="128" />
+            <text x="63" y="131.5" text-anchor="middle">
+              126&#8243; &nbsp;(10&#8242;-6&#8243;) &nbsp;FULL RUN
+            </text>
+          </g>
+          <!-- bays -->
+          <g class="dim">
+            <line
+              x1="1"
+              y1="117"
+              x2="31.25"
+              y2="117"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line
+              x1="32.25"
+              y1="117"
+              x2="62.5"
+              y2="117"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line
+              x1="63.5"
+              y1="117"
+              x2="93.75"
+              y2="117"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line
+              x1="94.75"
+              y1="117"
+              x2="125"
+              y2="117"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text x="16" y="115" text-anchor="middle">30&#188;&#8243;</text>
+            <text x="47.4" y="115" text-anchor="middle">30&#188;&#8243;</text>
+            <text x="78.6" y="115" text-anchor="middle">30&#188;&#8243;</text>
+            <text x="110" y="115" text-anchor="middle">30&#188;&#8243;</text>
+            <text
+              x="63"
+              y="122.5"
+              text-anchor="middle"
+              style="font-weight: 400"
+            >
+              4 bays &middot; 5 partitions at 1&#8243; &middot; 30&#188;&#8243;
+              is the safe span for &#190;&#8243; stock under books
+            </text>
+          </g>
+          <!-- heights, left -->
+          <g class="dim">
+            <line
+              x1="-16"
+              y1="108"
+              x2="-16"
+              y2="76"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line
+              x1="-16"
+              y1="76"
+              x2="-16"
+              y2="0"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="-18" y1="108" x2="-2" y2="108" />
+            <line class="ext" x1="-18" y1="76" x2="-2" y2="76" />
+            <line class="ext" x1="-18" y1="0" x2="-2" y2="0" />
+            <text
+              x="-16"
+              y="92"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 -16 92)"
+            >
+              32&#8243; BASE
+            </text>
+            <text
+              x="-16"
+              y="38"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 -16 38)"
+            >
+              76&#8243; UPPER
+            </text>
+            <line
+              x1="-30"
+              y1="108"
+              x2="-30"
+              y2="0"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="-30"
+              y="54"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 -30 54)"
+            >
+              108&#8243; &nbsp;(9&#8242;-0&#8243;)
+            </text>
+          </g>
+          <!-- AFF ticks, right -->
+          <g class="dim">
+            <line class="ext" x1="126" y1="108" x2="138" y2="108" />
+            <line class="ext" x1="126" y1="104" x2="138" y2="104" />
+            <line class="ext" x1="126" y1="76" x2="138" y2="76" />
+            <line class="ext" x1="126" y1="62" x2="138" y2="62" />
+            <line class="ext" x1="126" y1="48" x2="138" y2="48" />
+            <line class="ext" x1="126" y1="35" x2="138" y2="35" />
+            <line class="ext" x1="126" y1="22" x2="138" y2="22" />
+            <line class="ext" x1="126" y1="10" x2="138" y2="10" />
+            <line class="ext" x1="126" y1="0" x2="138" y2="0" />
+            <text x="140" y="109">0&#8243; &nbsp;FLOOR</text>
+            <text x="140" y="105">4&#8243; &nbsp;toe kick</text>
+            <text x="140" y="77" style="font-weight: 700">
+              32&#8243; &nbsp;LEDGE (6&#8243; DEEP)
+            </text>
+            <text x="140" y="63">46&#8243;</text>
+            <text x="140" y="49">60&#8243;</text>
+            <text x="140" y="36">73&#8243;</text>
+            <text x="140" y="23">86&#8243;</text>
+            <text x="140" y="11">98&#8243;</text>
+            <text x="140" y="1">108&#8243; &nbsp;CEILING</text>
+          </g>
+
+          <!-- scale bar -->
+          <g class="scale" transform="translate(-40,132)">
+            <line x1="0" y1="0" x2="24" y2="0" />
+            <rect x="0" y="-1.4" width="12" height="2.8" fill="#14110F" />
+            <line x1="0" y1="-2" x2="0" y2="2" />
+            <line x1="12" y1="-2" x2="12" y2="2" />
+            <line x1="24" y1="-2" x2="24" y2="2" />
+            <text x="0" y="6">0</text>
+            <text x="12" y="6" text-anchor="middle">12</text>
+            <text x="24" y="6" text-anchor="middle">24 in</text>
+          </g>
+        </svg>
+
+        <div class="notes">
+          <ul>
+            <li>
+              Vertical gaps run tallest at the bottom (14&#8243;) and tighten
+              going up (10&#8243; at the top), so oversized art books live where
+              you can reach them.
+            </li>
+            <li>
+              Top shelf at 98&#8243; needs a step stool. Treat it as deep
+              storage rather than daily reach.
+            </li>
+            <li>
+              Closed doors at the base rather than open baskets: closed fronts
+              bounce light back and keep the floor line quiet in a room with no
+              daylight.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================= SHEET 3 ============================= -->
+      <section class="sheet narrow">
+        <h2>Sheet 3 &middot; Far Wall Elevation</h2>
+        <p class="cap">
+          Two shelves above the bed, both clearing the head-strike line. The
+          lower shelf is deliberately shallow so the wall does not loom over the
+          pillow.
+        </p>
+
+        <svg
+          viewBox="-30 -16 176 150"
+          style="font-size: 3px"
+          role="img"
+          aria-label="Elevation of the far wall above the bed"
+        >
+          <!-- wall face -->
+          <rect
+            class="obj"
+            x="0"
+            y="0"
+            width="76"
+            height="108"
+            fill="#F6F1E8"
+          />
+
+          <!-- plinth 0-12 AFF -->
+          <rect
+            class="obj"
+            x="0"
+            y="96"
+            width="76"
+            height="12"
+            fill="#DBD3C6"
+          />
+          <rect
+            class="obj"
+            x="1"
+            y="97.2"
+            width="23.6"
+            height="9.6"
+            fill="#E5DED2"
+          />
+          <rect
+            class="obj"
+            x="26.2"
+            y="97.2"
+            width="23.6"
+            height="9.6"
+            fill="#E5DED2"
+          />
+          <rect
+            class="obj"
+            x="51.4"
+            y="97.2"
+            width="23.6"
+            height="9.6"
+            fill="#E5DED2"
+          />
+          <line class="thin" x1="9" y1="102" x2="16.6" y2="102" />
+          <line class="thin" x1="34.2" y1="102" x2="41.8" y2="102" />
+          <line class="thin" x1="59.4" y1="102" x2="67" y2="102" />
+
+          <!-- mattress 12-22 AFF -->
+          <rect
+            class="obj"
+            x="0.5"
+            y="86"
+            width="75"
+            height="10"
+            fill="#EDE7DD"
+          />
+          <!-- pillows at the left (head end) -->
+          <rect
+            class="obj"
+            x="3"
+            y="78"
+            width="17"
+            height="8"
+            rx="2.5"
+            fill="#FFFDF9"
+          />
+          <rect
+            class="obj"
+            x="4.5"
+            y="74.5"
+            width="14"
+            height="5"
+            rx="2"
+            fill="#FFFDF9"
+          />
+
+          <!-- SHELF A: underside 62 AFF (svg 46), 1" board, top 63 (svg 45) -->
+          <rect class="obj" x="0" y="45" width="76" height="1" fill="#C8BEAE" />
+          <line class="ledln" x1="2" y1="46.7" x2="74" y2="46.7" />
+          <!-- SHELF B: underside 82 AFF (svg 26), 1" board, top 83 (svg 25) -->
+          <rect class="obj" x="0" y="25" width="76" height="1" fill="#C8BEAE" />
+
+          <!-- books on shelf B, kept to the right so labels stay clear -->
+          <g fill="#CFC5B4" stroke="#2A2522" stroke-width=".22">
+            <rect x="58" y="14.5" width="1.6" height="10.5" />
+            <rect x="60" y="16" width="2.2" height="9" />
+            <rect x="62.6" y="13.8" width="1.4" height="11.2" />
+            <rect x="64.4" y="16.4" width="2.6" height="8.6" />
+            <rect x="67.4" y="15" width="1.8" height="10" />
+          </g>
+
+          <!-- uplight above shelf B -->
+          <g class="ledln">
+            <path d="M10,23 L10,15" />
+            <path d="M8.4,17.4 L10,14.6 L11.6,17.4" />
+            <path d="M26,23 L26,15" />
+            <path d="M24.4,17.4 L26,14.6 L27.6,17.4" />
+            <path d="M42,23 L42,15" />
+            <path d="M40.4,17.4 L42,14.6 L43.6,17.4" />
+          </g>
+          <text
+            class="lbl-sm"
+            x="38"
+            y="10"
+            text-anchor="middle"
+            fill="#D9942B"
+          >
+            uplight washes the ceiling &mdash; 25&#8243; of open air above Shelf
+            B
+          </text>
+
+          <!-- HEAD-STRIKE LINE at 58 AFF -> y=50 -->
+          <line class="strike" x1="-6" y1="50" x2="80" y2="50" />
+          <text class="lbl" x="82" y="49" fill="#B5502F">
+            58&#8243; HEAD-STRIKE LINE
+          </text>
+          <text class="lbl-sm" x="82" y="53.5" fill="#B5502F">
+            top of a seated adult &middot; Shelf A clears it by 4&#8243;
+          </text>
+
+          <!-- shelf labels, stacked inside the 19" clear band -->
+          <text class="lbl" x="38" y="31" text-anchor="middle">
+            SHELF B &mdash; 12&#8243; DEEP &middot; underside 82&#8243;
+          </text>
+          <text class="lbl-sm" x="38" y="35.5" text-anchor="middle">
+            archive + display &middot; kneel on the bed to reach
+          </text>
+          <text class="lbl" x="38" y="42" text-anchor="middle">
+            SHELF A &mdash; 6&#8243; DEEP &middot; underside 62&#8243;
+          </text>
+          <text class="lbl-sm" x="38" y="92.5" text-anchor="middle">
+            3 drawers &middot; 75&#8243; of frontage &middot; ~36&#8243; deep
+            &middot; seasonal + bedding
+          </text>
+          <text class="lbl-sm" x="11.5" y="70" text-anchor="middle">
+            HEAD END
+          </text>
+
+          <!-- ===== DIMENSIONS ===== -->
+          <g class="dim">
+            <line
+              x1="0"
+              y1="120"
+              x2="76"
+              y2="120"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <line class="ext" x1="0" y1="110" x2="0" y2="122" />
+            <line class="ext" x1="76" y1="110" x2="76" y2="122" />
+            <text x="38" y="125.5" text-anchor="middle">
+              76&#8243; &mdash; MATTRESS IS 75&#8243;, SO 1&#8243; TOTAL SLACK
+            </text>
+          </g>
+          <g class="dim">
+            <line
+              x1="-16"
+              y1="108"
+              x2="-16"
+              y2="0"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="-16"
+              y="54"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 -16 54)"
+            >
+              108&#8243; &nbsp;(9&#8242;-0&#8243;)
+            </text>
+            <line
+              x1="-7"
+              y1="108"
+              x2="-7"
+              y2="86"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="-7"
+              y="97"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 -7 97)"
+            >
+              22&#8243;
+            </text>
+            <line class="ext" x1="-18" y1="108" x2="-1" y2="108" />
+            <line class="ext" x1="-18" y1="86" x2="-1" y2="86" />
+            <line class="ext" x1="-18" y1="0" x2="-1" y2="0" />
+          </g>
+          <!-- clear gaps, right -->
+          <g class="dim">
+            <line
+              x1="92"
+              y1="45"
+              x2="92"
+              y2="26"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="92"
+              y="36"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 92 36)"
+            >
+              19&#8243; clear
+            </text>
+            <line
+              x1="92"
+              y1="25"
+              x2="92"
+              y2="0"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="92"
+              y="12"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 92 12)"
+            >
+              25&#8243; open
+            </text>
+            <line class="ext" x1="76" y1="45" x2="94" y2="45" />
+            <line class="ext" x1="76" y1="26" x2="94" y2="26" />
+            <line class="ext" x1="76" y1="0" x2="94" y2="0" />
+          </g>
+
+          <!-- clearance callout -->
+          <g class="dim">
+            <line
+              x1="26"
+              y1="86"
+              x2="26"
+              y2="50"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text
+              x="26"
+              y="68"
+              text-anchor="middle"
+              dy="-1.8"
+              transform="rotate(-90 26 68)"
+            >
+              36&#8243; seated
+            </text>
+            <line
+              x1="8"
+              y1="50"
+              x2="8"
+              y2="46"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <text x="10" y="49.2" style="font-weight: 700">4&#8243;</text>
+          </g>
+
+          <g class="scale" transform="translate(-26,130)">
+            <line x1="0" y1="0" x2="24" y2="0" />
+            <rect x="0" y="-1.4" width="12" height="2.8" fill="#14110F" />
+            <line x1="0" y1="-2" x2="0" y2="2" />
+            <line x1="12" y1="-2" x2="12" y2="2" />
+            <line x1="24" y1="-2" x2="24" y2="2" />
+            <text x="0" y="6">0</text>
+            <text x="12" y="6" text-anchor="middle">12</text>
+            <text x="24" y="6" text-anchor="middle">24 in</text>
+          </g>
+        </svg>
+
+        <div class="notes">
+          <ul>
+            <li>
+              Mattress top sits at 22&#8243;. A seated adult measures
+              34&ndash;38&#8243; from seat to crown, so heads top out near
+              56&ndash;60&#8243;. Shelf A&#8217;s underside at 62&#8243; clears
+              that with buffer.
+            </li>
+            <li>
+              The left wall above the pillows stays completely clear. That is
+              the surface people genuinely sit up into, and a shelf there would
+              be a hazard. All bed lighting comes from under Shelf A, so nothing
+              projects.
+            </li>
+            <li>
+              Shelf A is a comfortable overhead reach from seated in bed. Shelf
+              B is not. Put nothing you need nightly on B.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================= SHEET 4 ============================= -->
+      <section class="sheet narrow">
+        <h2>Sheet 4 &middot; Section Through the Shelf Run</h2>
+        <p class="cap">
+          The step at larger scale. This detail is the whole design: depth sits
+          low, below your sightline, so the room still measures 64&#8243; wide
+          where your eye actually travels.
+        </p>
+
+        <svg
+          viewBox="-34 -20 100 152"
+          style="font-size: 2.1px"
+          role="img"
+          aria-label="Vertical section through the stepped shelf run"
+        >
+          <!-- wall -->
+          <rect class="wall" x="-4" y="0" width="4" height="108" />
+          <line class="room" x1="0" y1="0" x2="0" y2="108" />
+          <!-- floor + ceiling -->
+          <line class="room" x1="-4" y1="108" x2="46" y2="108" />
+          <line class="room" x1="-4" y1="0" x2="46" y2="0" />
+          <text class="lbl-sm" x="40" y="111.5" text-anchor="end">FLOOR</text>
+          <text class="lbl-sm" x="40" y="-2" text-anchor="end">
+            CEILING 108&#8243;
+          </text>
+
+          <!-- toe kick: AFF 0-4, depth 0-15 -->
+          <rect
+            class="obj"
+            x="0"
+            y="104"
+            width="15"
+            height="4"
+            fill="#B9AF9F"
+          />
+          <!-- base carcass: AFF 4-32, depth 0-18 -->
+          <rect
+            class="obj"
+            x="0"
+            y="76"
+            width="18"
+            height="28"
+            fill="#DBD3C6"
+          />
+          <rect
+            class="obj"
+            x="16.6"
+            y="77.4"
+            width="1.4"
+            height="25.2"
+            fill="#E5DED2"
+          />
+          <!-- ledge cap: AFF 32-33.5, depth 0-18 -->
+          <rect x="0" y="74.5" width="18" height="1.5" fill="#2F4739" />
+          <!-- upper carcass: AFF 33.5-108, depth 0-12 -->
+          <rect
+            class="obj"
+            x="0"
+            y="0"
+            width="12"
+            height="74.5"
+            fill="#F6F1E8"
+          />
+
+          <!-- shelves in section -->
+          <rect
+            class="obj"
+            x="0"
+            y="60.8"
+            width="12"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="46.8"
+            width="12"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="33.8"
+            width="12"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="20.8"
+            width="12"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+          <rect
+            class="obj"
+            x="0"
+            y="8.8"
+            width="12"
+            height="1.2"
+            fill="#C8BEAE"
+          />
+
+          <!-- LED channels routed into shelf fronts -->
+          <rect class="led" x="10.2" y="62" width="1.8" height="1.4" />
+          <rect class="led" x="10.2" y="48" width="1.8" height="1.4" />
+          <rect class="led" x="10.2" y="35" width="1.8" height="1.4" />
+          <rect class="led" x="10.2" y="22" width="1.8" height="1.4" />
+          <rect class="led" x="10.2" y="10" width="1.8" height="1.4" />
+          <!-- LED in the ledge, uplighting the lowest bay -->
+          <rect class="led" x="15.4" y="72.6" width="1.8" height="1.9" />
+
+          <!-- callouts -->
+          <text class="lbl-key" x="24" y="90">18&#8243; CLOSED BASE</text>
+          <text class="lbl-sm" x="24" y="94">carcass to 32&#8243; AFF</text>
+          <text class="lbl-key" x="20" y="40">12&#8243; OPEN UPPER</text>
+          <text class="lbl-sm" x="20" y="44">32&#8243; to ceiling</text>
+          <text class="lbl" x="24" y="76" fill="#2F4739">6&#8243; LEDGE</text>
+          <text class="lbl-sm" x="24" y="79.8">
+            18 &minus; 12 = 6 &middot; working surface + concealed LED
+          </text>
+          <text class="lbl-sm" x="24" y="106">
+            4&#8243; toe kick, recessed 3&#8243;
+          </text>
+          <line class="thin" x1="10" y1="105.5" x2="23" y2="105.5" />
+          <text class="lbl-sm" x="24" y="63.5" fill="#D9942B">
+            LED routed into every shelf front
+          </text>
+          <line class="thin" x1="12.4" y1="62.7" x2="23" y2="62.7" />
+
+          <!-- dims -->
+          <g class="dim">
+            <line
+              x1="0"
+              y1="122"
+              x2="18"
+              y2="122"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <line class="ext" x1="0" y1="110" x2="0" y2="124" />
+            <line class="ext" x1="18" y1="110" x2="18" y2="124" />
+            <text x="9" y="127" text-anchor="middle">18&#8243;</text>
+            <line
+              x1="18"
+              y1="122"
+              x2="46"
+              y2="122"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <text x="32" y="127" text-anchor="middle">
+              58&#8243; CLEAR &rarr;
+            </text>
+          </g>
+          <g class="dim">
+            <line
+              x1="0"
+              y1="-10"
+              x2="12"
+              y2="-10"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <line class="ext" x1="12" y1="-12" x2="12" y2="-2" />
+            <text x="6" y="-12" text-anchor="middle">12&#8243;</text>
+            <line
+              x1="12"
+              y1="-10"
+              x2="46"
+              y2="-10"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <text x="29" y="-12" text-anchor="middle">
+              64&#8243; CLEAR AT EYE LEVEL &rarr;
+            </text>
+          </g>
+          <g class="dim">
+            <line
+              x1="12"
+              y1="70"
+              x2="18"
+              y2="70"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <text x="15" y="68" text-anchor="middle">6&#8243;</text>
+          </g>
+          <g class="dim">
+            <line class="ext" x1="18" y1="76" x2="24" y2="76" />
+            <line
+              x1="-14"
+              y1="108"
+              x2="-14"
+              y2="76"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <text
+              x="-14"
+              y="92"
+              text-anchor="middle"
+              dy="-1.4"
+              transform="rotate(-90 -14 92)"
+            >
+              32&#8243;
+            </text>
+            <line
+              x1="-14"
+              y1="76"
+              x2="-14"
+              y2="0"
+              marker-start="url(#arws)"
+              marker-end="url(#arws)"
+            />
+            <text
+              x="-14"
+              y="38"
+              text-anchor="middle"
+              dy="-1.4"
+              transform="rotate(-90 -14 38)"
+            >
+              76&#8243;
+            </text>
+            <line class="ext" x1="-16" y1="76" x2="-2" y2="76" />
+          </g>
+
+          <g class="scale" transform="translate(-30,118)">
+            <line x1="0" y1="0" x2="12" y2="0" />
+            <rect x="0" y="-1" width="6" height="2" fill="#14110F" />
+            <line x1="0" y1="-1.6" x2="0" y2="1.6" />
+            <line x1="6" y1="-1.6" x2="6" y2="1.6" />
+            <line x1="12" y1="-1.6" x2="12" y2="1.6" />
+            <text x="0" y="4.5">0</text>
+            <text x="12" y="4.5" text-anchor="middle">12 in</text>
+          </g>
+        </svg>
+
+        <div class="notes">
+          <ul>
+            <li>
+              The whole scheme hangs on this step. Floor clearance drops to
+              58&#8243;, but at standing eye level the room still reads
+              64&#8243; wide, and the eye never travels to the floor.
+            </li>
+            <li>
+              LED channels shown routed into the shelf fronts and the ledge. On
+              an IKEA-based build these become surface-mounted channels instead,
+              which is the main visual compromise of that route.
+            </li>
+            <li>
+              Toe kick recessed 3&#8243; so you can stand close to the shelves
+              without your toes catching.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================= SHEET 5 ============================= -->
+      <section class="sheet mid">
+        <h2>Sheet 5 &middot; Reflected Ceiling &amp; Lighting Plan</h2>
+        <p class="cap">
+          No daylight reaches this room, so light is the architecture. The
+          existing central fixture becomes a junction point rather than the main
+          source.
+        </p>
+
+        <svg
+          viewBox="-24 -24 148 256"
+          style="font-size: 3px"
+          role="img"
+          aria-label="Lighting plan"
+        >
+          <!-- room -->
+          <rect class="wall" x="-4" y="-4" width="84" height="4" />
+          <rect class="wall" x="-4" y="0" width="4" height="164" />
+          <rect class="wall" x="76" y="0" width="4" height="164" />
+          <rect class="wall" x="-4" y="164" width="42" height="4" />
+          <rect class="wall" x="70" y="164" width="10" height="4" />
+          <rect class="room" x="0" y="0" width="76" height="164" />
+
+          <!-- furniture ghosted -->
+          <rect
+            x="0"
+            y="0"
+            width="76"
+            height="38"
+            fill="#F1ECE3"
+            stroke="#C8BEAE"
+            stroke-width=".35"
+          />
+          <rect
+            x="0"
+            y="38"
+            width="18"
+            height="126"
+            fill="#F1ECE3"
+            stroke="#C8BEAE"
+            stroke-width=".35"
+          />
+          <text
+            class="lbl-sm"
+            x="47"
+            y="20"
+            text-anchor="middle"
+            fill="#A79C8D"
+          >
+            BED
+          </text>
+          <text
+            class="lbl-sm"
+            x="9"
+            y="120"
+            text-anchor="middle"
+            fill="#A79C8D"
+            transform="rotate(-90 9 120)"
+          >
+            SHELF RUN
+          </text>
+
+          <!-- C1: wall washers, 15" off the right wall -->
+          <g>
+            <circle class="obj" cx="61" cy="22" r="2.6" fill="#B5502F" />
+            <circle class="obj" cx="61" cy="54" r="2.6" fill="#B5502F" />
+            <circle class="obj" cx="61" cy="86" r="2.6" fill="#B5502F" />
+            <circle class="obj" cx="61" cy="118" r="2.6" fill="#B5502F" />
+            <circle class="obj" cx="61" cy="150" r="2.6" fill="#B5502F" />
+            <g stroke="#B5502F" stroke-width=".4" fill="none">
+              <path d="M63.6,22 L74,15 M63.6,22 L74,29" />
+              <path d="M63.6,54 L74,47 M63.6,54 L74,61" />
+              <path d="M63.6,86 L74,79 M63.6,86 L74,93" />
+              <path d="M63.6,118 L74,111 M63.6,118 L74,125" />
+              <path d="M63.6,150 L74,143 M63.6,150 L74,157" />
+            </g>
+          </g>
+          <g class="dim">
+            <line
+              x1="61"
+              y1="168"
+              x2="76"
+              y2="168"
+              marker-start="url(#arw)"
+              marker-end="url(#arw)"
+            />
+            <text x="68.5" y="173" text-anchor="middle">15&#8243;</text>
+          </g>
+
+          <!-- C2: shelf LED cove -->
+          <line class="ledln" x1="11" y1="39" x2="11" y2="163" />
+          <line class="ledln" x1="2" y1="2" x2="74" y2="2" />
+
+          <!-- C4: existing central fixture -->
+          <circle
+            cx="38"
+            cy="82"
+            r="4.5"
+            fill="none"
+            stroke="#2A2522"
+            stroke-width=".6"
+          />
+          <line class="thin" x1="34.8" y1="78.8" x2="41.2" y2="85.2" />
+          <line class="thin" x1="41.2" y1="78.8" x2="34.8" y2="85.2" />
+          <line class="thin" x1="36" y1="86.5" x2="28" y2="95" />
+          <text class="lbl" x="19" y="99">EXISTING CENTRAL FIXTURE</text>
+          <text class="lbl-sm" x="19" y="103.5">
+            retain the box as the feed junction;
+          </text>
+          <text class="lbl-sm" x="19" y="107.5">
+            blank off or fit a dimmed flush disc
+          </text>
+
+          <!-- legend -->
+          <g transform="translate(0,184)">
+            <text class="lbl" x="0" y="0">CIRCUITS</text>
+            <circle
+              cx="2.5"
+              cy="6"
+              r="2.4"
+              fill="#B5502F"
+              stroke="#2A2522"
+              stroke-width=".3"
+            />
+            <text class="lbl-sm" x="8" y="7">
+              C1 &middot; wall wash to the bare right wall &mdash; the single
+              highest-impact move
+            </text>
+            <line class="ledln" x1="0" y1="13" x2="5" y2="13" />
+            <text class="lbl-sm" x="8" y="14">
+              C2 &middot; concealed LED, every shelf front + the 32&#8243; ledge
+            </text>
+            <line class="ledln" x1="0" y1="20" x2="5" y2="20" />
+            <text class="lbl-sm" x="8" y="21">
+              C3 &middot; bed light, strip under Shelf A on the far wall, own
+              dimmer
+            </text>
+            <circle
+              cx="2.5"
+              cy="27"
+              r="2.4"
+              fill="none"
+              stroke="#2A2522"
+              stroke-width=".5"
+            />
+            <text class="lbl-sm" x="8" y="28">
+              C4 &middot; existing central point, background layer only, dimmed
+            </text>
+            <text class="lbl-sm" x="0" y="35" style="font-weight: 700">
+              All circuits tunable white 2700K&ndash;4000K, all dimmed, switched
+              separately.
+            </text>
+          </g>
+        </svg>
+
+        <div class="notes">
+          <ul>
+            <li>
+              <b>Why the central fixture gets demoted.</b> One source in the
+              middle of a 6&#8242;4&#8243; room throws matching shadows down
+              both long walls, flattens the book spines, and pulls the eye
+              straight to the narrow dimension. Its value here is the live feed
+              it provides.
+            </li>
+            <li>
+              <b>Why the wall wash matters most.</b> A brightly lit long wall
+              visually recedes. Turning the full 13&#8242;8&#8243; &times;
+              9&#8242; bare plane into a soft light source widens the room more
+              than any change to the floor plan could.
+            </li>
+            <li>
+              Avoid a centre line of downlights. It would spotlight exactly the
+              proportion you want people to stop noticing.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================= SPEC ============================= -->
+      <section class="sheet">
+        <h2>Specification</h2>
+        <p class="cap">Every dimension in one place, for quoting.</p>
+
+        <table class="spec">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Dimension</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="grp">
+              <td colspan="3">Room</td>
+            </tr>
+            <tr>
+              <td>Length</td>
+              <td class="num">164&#8243; (13&#8242;-8&#8243;)</td>
+              <td>38&#8243; bed zone + 126&#8243; shelf run</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td class="num">76&#8243; (6&#8242;-4&#8243;)</td>
+              <td>
+                18&#8243; base + 58&#8243; clear; 12&#8243; upper + 64&#8243;
+                clear
+              </td>
+            </tr>
+            <tr>
+              <td>Ceiling height</td>
+              <td class="num">108&#8243; (9&#8242;-0&#8243;)</td>
+              <td>The one generous dimension. Use it.</td>
+            </tr>
+            <tr>
+              <td>Window</td>
+              <td class="num">None</td>
+              <td>Fully interior</td>
+            </tr>
+            <tr>
+              <td>Door</td>
+              <td class="num">32&#8243; opening, near wall</td>
+              <td>Swings out. No arc inside the room.</td>
+            </tr>
+
+            <tr class="grp">
+              <td colspan="3">Bed &amp; plinth</td>
+            </tr>
+            <tr>
+              <td>Mattress</td>
+              <td class="num">38&#8243; &times; 75&#8243;</td>
+              <td>Standard twin. Twin XL at 80&#8243; will not fit.</td>
+            </tr>
+            <tr>
+              <td>Opening tolerance</td>
+              <td class="num">1&#8243; total</td>
+              <td>Rules out any conventional frame</td>
+            </tr>
+            <tr>
+              <td>Plinth height</td>
+              <td class="num">12&#8243;</td>
+              <td>
+                Scribe strips both ends; shallow rebate so the mattress cannot
+                creep
+              </td>
+            </tr>
+            <tr>
+              <td>Mattress top</td>
+              <td class="num">22&#8243; AFF</td>
+              <td>Sets every clearance above</td>
+            </tr>
+            <tr>
+              <td>Drawers</td>
+              <td class="num">3 &times; ~25&#8243; wide, ~36&#8243; deep</td>
+              <td>
+                ~60 cu ft. Near face is the only open side. Full-extension
+                slides.
+              </td>
+            </tr>
+
+            <tr class="grp">
+              <td colspan="3">Shelf run &mdash; left wall</td>
+            </tr>
+            <tr>
+              <td>Run length</td>
+              <td class="num">126&#8243; (10&#8242;-6&#8243;)</td>
+              <td>Starts flush with the bed&#8217;s foot edge</td>
+            </tr>
+            <tr>
+              <td>Base depth</td>
+              <td class="num">18&#8243;</td>
+              <td>Closed doors, 0 to 32&#8243; AFF</td>
+            </tr>
+            <tr>
+              <td>Upper depth</td>
+              <td class="num">12&#8243;</td>
+              <td>Open shelving, 32&#8243; to 108&#8243;</td>
+            </tr>
+            <tr>
+              <td>Ledge at step</td>
+              <td class="num">6&#8243; deep at 32&#8243; AFF</td>
+              <td>Working surface + concealed LED</td>
+            </tr>
+            <tr>
+              <td>Toe kick</td>
+              <td class="num">4&#8243; high, recessed 3&#8243;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bays</td>
+              <td class="num">4 &times; 30&#188;&#8243; clear</td>
+              <td>
+                5 partitions at 1&#8243;. 30&#188;&#8243; is the safe span for
+                &#190;&#8243; stock under books.
+              </td>
+            </tr>
+            <tr>
+              <td>Shelf heights AFF</td>
+              <td class="num">46, 60, 73, 86, 98&#8243;</td>
+              <td>
+                Adjustable, 32&nbsp;mm pin system, one fixed at mid-height
+              </td>
+            </tr>
+            <tr>
+              <td>Capacity</td>
+              <td class="num">~63 linear feet</td>
+              <td>This wall alone</td>
+            </tr>
+
+            <tr class="grp">
+              <td colspan="3">Far wall shelves</td>
+            </tr>
+            <tr>
+              <td>Shelf A</td>
+              <td class="num">underside 62&#8243; AFF, 6&#8243; deep</td>
+              <td>
+                Clears the 58&#8243; head-strike line by 4&#8243;. Daily reach
+                from seated.
+              </td>
+            </tr>
+            <tr>
+              <td>Shelf B</td>
+              <td class="num">underside 82&#8243; AFF, 12&#8243; deep</td>
+              <td>Archive and display. Requires kneeling on the bed.</td>
+            </tr>
+            <tr>
+              <td>Head-strike line</td>
+              <td class="num">58&#8243; AFF</td>
+              <td>22&#8243; mattress + 36&#8243; seated adult</td>
+            </tr>
+            <tr>
+              <td>Capacity</td>
+              <td class="num">~12.7 linear feet</td>
+              <td>2 shelves &times; 76&#8243;</td>
+            </tr>
+            <tr>
+              <td>Left wall above pillows</td>
+              <td class="num">Clear</td>
+              <td>No shelving. Genuine hazard zone.</td>
+            </tr>
+
+            <tr class="grp">
+              <td colspan="3">Lighting</td>
+            </tr>
+            <tr>
+              <td>C1 wall wash</td>
+              <td class="num">5 fixtures, 15&#8243; off right wall</td>
+              <td>Highest-impact move in the scheme</td>
+            </tr>
+            <tr>
+              <td>C2 shelf LED</td>
+              <td class="num">Every shelf front + ledge</td>
+              <td>
+                Routed channels on a joinery build; surface channels on an IKEA
+                build
+              </td>
+            </tr>
+            <tr>
+              <td>C3 bed</td>
+              <td class="num">Strip under Shelf A, 76&#8243;</td>
+              <td>Own dimmer. Plus one adjustable spot on Shelf A.</td>
+            </tr>
+            <tr>
+              <td>C4 existing central</td>
+              <td class="num">Retain as feed junction</td>
+              <td>Blank off or dimmed flush disc, background layer only</td>
+            </tr>
+            <tr>
+              <td>Colour temperature</td>
+              <td class="num">2700K&ndash;4000K tunable</td>
+              <td>Matters more here than anywhere, with no daylight</td>
+            </tr>
+
+            <tr class="grp">
+              <td colspan="3">Finishes</td>
+            </tr>
+            <tr>
+              <td>Left wall joinery</td>
+              <td class="num">Deep saturated</td>
+              <td>
+                Ink blue, deep green, oxblood, or dark warm neutral. Pale paint
+                with no daylight reads grey.
+              </td>
+            </tr>
+            <tr>
+              <td>Right wall + ceiling</td>
+              <td class="num">LRV 70+, warm off-white</td>
+              <td>Keeps the wash bright and pushes the wall away</td>
+            </tr>
+            <tr>
+              <td>Optional mirror</td>
+              <td class="num">Full height, right wall</td>
+              <td>Site it opposite the reading nook, never opposite the bed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="notes">
+          <ul>
+            <li>
+              <b>Code and egress.</b> In much of the US a room without an egress
+              window cannot legally be designated a bedroom. It does not change
+              how well the room works, but it can affect appraisal, insurance
+              and resale. Confirm locally before commissioning joinery.
+            </li>
+            <li>
+              <b>Ventilation.</b> A sealed interior room used for sleeping needs
+              real air exchange. Confirm supply and return, or plan a transfer
+              grille or inline fan.
+            </li>
+            <li>
+              <b>Construction route.</b> The plinth is custom either way. For
+              the run, a hybrid is likely best value: stock carcasses for the
+              four upper book bays, custom work for the base, the ledge and the
+              plinth. Verify actual stock depths first, since common bookcase
+              depths sit close to but not exactly at 12&#8243;.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="doc">
+        Drawings are dimensioned in inches and drawn to scale. Verify all
+        dimensions on site before fabrication, particularly the 76&#8243; width
+        at floor, mattress height and ceiling, since the 1&#8243; bed tolerance
+        leaves no margin for out-of-square walls.
+      </footer>
+    </div>
+  </body>
+</html>
